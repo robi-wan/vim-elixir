@@ -15,6 +15,25 @@ if exists("loaded_matchit") && !exists("b:match_words")
         \ ',{:},\[:\],(:)'
 endif
 
+" Add TagBar support
+let g:tagbar_type_elixir  = {
+            \ 'ctagstype': 'elixir',
+            \ 'kinds' : [
+              \ 'f:functions',
+              \ 'c:callbacks',
+              \ 'd:delegates',
+              \ 'e:exceptions',
+              \ 'i:implementations',
+              \ 'a:macros',
+              \ 'o:operators',
+              \ 'm:modules',
+              \ 'p:protocols',
+              \ 'r:records',
+              \ 't:tests'
+            \ ],
+            \ 'deffile': expand('<sfile>:p:h:h') . '/ctags/elixir.cnf',
+        \ }
+
 setlocal comments=:#
 setlocal commentstring=#\ %s
 
